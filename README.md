@@ -1,3 +1,28 @@
+#betterplace
+
+this repo will show the details of clients who are living in different countries,
+
+to run this repo
+
+Step 1: run 'npm install' to install the node_modules
+
+step 2: run 'npm install cors axios react-image-lightbox' this will install all the dependencies we want
+
+Step 3: Then we are good to go finally run 'npm start' will run our development environment
+
+Step 4: initially it loads 1000 documents and we can filter according to our wish on the webpage
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
