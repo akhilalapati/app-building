@@ -10,6 +10,7 @@ function HomePage() {
   const [results, setResults] = useState(1000);
   const [OriginalData, setOriginalData] = useState([]);
   const [pagenumber, setPageNumber] = useState(1);
+  const [ok, setOk] = useState(false);
   const fetchdata = () => {
     console.log(gender, results, country);
     if (gender !== "" && country !== "") {
@@ -38,10 +39,12 @@ function HomePage() {
       setData(JSON.stringify(newData) || "No data");
       const inter = newData.results;
       setOriginalData(inter);
+      setOk(true);
     });
   };
   useEffect(()=>{
     callapi();
+
   },[]);
   const handelgender = (e) => {
     setGender(e.target.value);
@@ -81,13 +84,6 @@ function HomePage() {
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
-        <select className="result" onChange={handelresults}>
-          <option value="">Results</option>
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="50">50</option>
-          <option value="100">100</option>
-        </select>
         <select className="Country" onChange={handelcountry}>
           <option value="">Country</option>
           <option value="AU">Australia</option>
@@ -96,7 +92,14 @@ function HomePage() {
           <option value="GB">Great Britain</option>
           <option value="US">USA</option>
         </select>
-        <button onClick={() => callapi()}>load data</button>
+        <select className="result" onChange={handelresults}>
+          <option value="">Results</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        <button onClick={() => {callapi(); setPageNumber(1)}}>load data</button>
         <button
           onClick={() => {
             callapi();
@@ -107,8 +110,13 @@ function HomePage() {
           Next  &gt;&gt;&gt;
         </button>
       </div>
-      <div >
+      <div className = 'bottom'>
+        <div className = "pagenumber"> 
         Page.No:- {pagenumber}
+        </div>
+        <div className = "results">
+          {!ok ? "Loading":'Showing'} {results} of 1000
+        </div>
       </div>
       <div className="details">
         {/* <p>{data}data is here</p> */}
