@@ -1,0 +1,40 @@
+.Header {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: xx-large;
+}
+.Queries {
+    text-align: center;
+    margin: 20px;
+  }
+  .gender {
+    margin: 20px;
+    padding: 5px;
+    width: 100px;
+  }
+  .Country {
+    margin: 20px;
+    padding: 5px;
+    width: 100px;
+  }
+  .result {
+    margin: 20px;
+    padding: 5px;
+    width: 100px;
+  }
+  button {
+    margin: 20px;
+    padding: 5px;
+    width: 100px;
+  }
+  .details {
+    display: inline-block;
+    margin:15px
+  }
+.prev__button{
+  margin-right:10% !important;
+}
+.next__button{
+  margin-left:10% !important;
+}
+  
