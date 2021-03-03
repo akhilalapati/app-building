@@ -39,7 +39,7 @@ function HomePage() {
       setData(JSON.stringify(newData) || "No data");
       const inter = newData.results;
       setOriginalData(inter);
-      setOk(true);
+      setOk(true)
     });
   };
   useEffect(()=>{
@@ -54,6 +54,7 @@ function HomePage() {
   };
   const handelresults = (e) => {
     setResults(e.target.value);
+    setOk(false);
   };
 
   const handleNextPageNumber = (pagenumber) => {
