@@ -61,10 +61,10 @@ function HomePage() {
     setPageNumber(pagenumber + 1);
   };
   const handlePrevPageNumber = (pagenumber) => {
-    if (pagenumber === 1) {
+    if (pagenumber <= 1) {
       setPageNumber(1);
-    }
-    setPageNumber(pagenumber - 1);
+    }else{
+    setPageNumber(pagenumber - 1);}
   };
 
   return (
@@ -72,9 +72,11 @@ function HomePage() {
       <p className="Header"> BetterPlace</p>
       <div className="Queries">
         <button
-          onClick={() => {
-            callapi();
+          onClick={() => {pagenumber>1 ?
+            callapi():
             handlePrevPageNumber(pagenumber);
+            handlePrevPageNumber(pagenumber);
+
           }}
           className = "prev__button"
         >
@@ -116,7 +118,7 @@ function HomePage() {
         Page.No:- {pagenumber}
         </div>
         <div className = "results">
-          {!ok ? "Loading":'Showing'} {results} of 1000
+          {!ok ? "Loading....":'Showing'} {results} of 1000
         </div>
       </div>
       <div className="details">
