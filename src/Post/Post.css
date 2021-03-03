@@ -2,9 +2,4 @@
     display: flex;
     text-align:center;
   }
-  
-.dialog {
-  box-shadow: 0 8px 6px -6px black;
-  position: static;
-  top: 10%;
-}
+

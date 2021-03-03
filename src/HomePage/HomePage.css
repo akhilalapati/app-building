@@ -8,22 +8,22 @@
     margin: 20px;
   }
   .gender {
-    margin: 20px;
+    margin: 15px;
     padding: 5px;
     width: 100px;
   }
   .Country {
-    margin: 20px;
+    margin: 15px;
     padding: 5px;
     width: 100px;
   }
   .result {
-    margin: 20px;
+    margin: 15px;
     padding: 5px;
     width: 100px;
   }
   button {
-    margin: 20px;
+    margin: 15px;
     padding: 5px;
     width: 100px;
   }
@@ -38,12 +38,13 @@
   margin-left:10% !important;
 }
   
-/* .pagenumber{
-  float:left;
+.pagenumber{
+  margin:5px;
 }
 .results{
-  float:right;
-} */
+  margin:5px;
+}
 .bottom{
   text-align: center;
+  padding:5px;
 }

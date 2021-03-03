@@ -55,6 +55,7 @@ function HomePage() {
   const handelresults = (e) => {
     setResults(e.target.value);
     setOk(false);
+    alert("click Load Data");
   };
 
   const handleNextPageNumber = (pagenumber) => {
@@ -76,7 +77,6 @@ function HomePage() {
             callapi():
             handlePrevPageNumber(pagenumber);
             handlePrevPageNumber(pagenumber);
-
           }}
           className = "prev__button"
         >
@@ -102,7 +102,7 @@ function HomePage() {
           <option value="50">50</option>
           <option value="100">100</option>
         </select>
-        <button onClick={() => {callapi(); setPageNumber(1)}}>load data</button>
+        <button onClick={() => {callapi(); setPageNumber(1)}}>Load Data</button>
         <button
           onClick={() => {
             callapi();
@@ -117,6 +117,7 @@ function HomePage() {
         <div className = "pagenumber"> 
         Page.No:- {pagenumber}
         </div>
+        {!ok? <div>Click Load Data</div>:<div></div>}
         <div className = "results">
           {!ok ? "Loading....":'Showing'} {results} of 1000
         </div>
